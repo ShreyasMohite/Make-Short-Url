@@ -1,0 +1,37 @@
+{%extends "layout.html"%}
+
+
+{%block content%}
+
+<div class="container-fluid bg-dark text-white text-center py-5">
+    <h3>URL SHORTNER</h3>
+</div>
+
+
+<div class="container my-5 text-center">
+    <form action="/" method="POST">
+        <input class="w-75" type="url" name="urls" id="geturls">
+        <button type="submit" class="btn btn-primary" onclick="hello()">Short</button>
+    </form>
+</div>
+
+
+<div class="container bg-light py-3 my-3 text-wrap">
+            {%if urlx%}
+            <h5 class="text-center" id="urls">{{urlx}}</h5>
+            {%else%}
+            <h5 class="text-center" id="urls">please enter url</h5>
+            {%endif%} 
+            <div class="text-center">
+                    <button  onclick="show()" type="button" class="btn btn-info text-center" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy Url">
+                        Copy
+                    </button>
+           </div>
+   
+    
+
+    
+</div>
+
+
+{%endblock%}
